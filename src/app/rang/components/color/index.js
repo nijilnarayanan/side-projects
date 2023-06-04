@@ -1,11 +1,12 @@
-'use client'
-
 import { Wrapper, Percent, Hex } from './style'
-const Color = () => {
+
+
+const Color = ({ type, weight, hexColor }) => {
+	const hexValue = `#${hexColor}`
 	return (
-		<Wrapper>
-			<Percent>20%</Percent>
-			<Hex>#ffffff</Hex>
+		<Wrapper type={type} bgColor={hexValue}>
+			<Percent type={type}>{weight}%</Percent>
+			<Hex type={type}>{hexValue}</Hex>
 		</Wrapper>
 	)
 }
