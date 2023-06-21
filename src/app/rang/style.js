@@ -40,7 +40,7 @@ export const PickerWrapper = styled.div`
 `
 
 export const Input = styled.input`
-	width: ${(p) => (p.type === 'text' ? '100px' : '50px')};
+	width: ${(p) => (p.type === 'text' ? '100px' : '54px')};
 	height: 44px;
 	outline: none;
 	border: 2px solid ${(p) => p.bgColor || 'black'};
