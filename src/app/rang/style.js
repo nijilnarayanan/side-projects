@@ -16,7 +16,7 @@ export const Header = styled.section`
 `
 
 export const Logo = styled.div`
-  margin: 0 96px;
+	margin: 0 96px;
 `
 
 export const Preview = styled.div`
@@ -50,6 +50,10 @@ export const Input = styled.input`
 	font-size: 20px;
 	color: #333333;
 	margin-right: 20px;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
 `
 
 export const Picker = styled.input`
@@ -118,5 +122,5 @@ export const Section = styled.section`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
 	grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
-    min-height: calc(100vh - 132px);
+	min-height: calc(100vh - 132px);
 `
