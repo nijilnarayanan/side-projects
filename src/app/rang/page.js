@@ -1,10 +1,12 @@
 'use client'
 import { Fragment, useState } from 'react'
 import Image from 'next/image'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Color from './components/color'
 import Values from 'values.js'
-import logo from './logo.png'
-import pickerLogo from './pickerLogo.png'
+import logo from './icons/logo.png'
+import pickerLogo from './icons/pickerLogo.png'
 import { Header, PickerWrapper, Preview, Logo, Picker, Input, Button, Section } from './style'
 
 const hexRegex = /^#([0-9a-f]{3}){1,2}$/
@@ -27,7 +29,7 @@ const ColorGenerator = () => {
 		<Fragment>
 			<Header>
 				<Logo>
-					<Image src={logo} width={250} height={96} alt='logo' />
+					<Image src={logo} width={200} height={96} alt='logo' />
 				</Logo>
 				<PickerWrapper>
 					<Image src={pickerLogo} width={30} height={30} alt='picker' />
@@ -61,6 +63,7 @@ const ColorGenerator = () => {
 					<Color key={color} index={index} {...color} hexColor={color.hex} />
 				))}
 			</Section>
+			<ToastContainer />
 		</Fragment>
 	)
 }

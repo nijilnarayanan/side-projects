@@ -24,7 +24,6 @@ export const Preview = styled.div`
 	height: 26px;
 	width: 26px;
 	border-radius: 50%;
-	margin-left: 8px;
 `
 
 export const PickerWrapper = styled.div`
@@ -44,9 +43,9 @@ export const Input = styled.input`
 	width: ${(p) => (p.type === 'text' ? '100px' : '50px')};
 	height: 44px;
 	outline: none;
-	border: 1px solid ${(p) => p.bgColor || 'black'};
+	border: 2px solid ${(p) => p.bgColor || 'black'};
 	border-radius: 8px;
-	padding: 4px;
+	padding: 4px 8px;
 	background: none;
 	font-size: 20px;
 	color: #333333;
